@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Josefin+Sans:wght@100;400;700&display=swap');
+@import 'var.scss';
+@import 'bhr.scss';
+@import 'why.scss';
+@import 'icon.scss';
+@import 'book.scss';
+@import 'review.scss';
+@import 'footer.scss';
+
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: $font-text;
+  color: #fff;
+}
+.fas {
+  font-size: 40px;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  @media screen and (max-width: 1200px) {
+    width: 960px;
+  }
+   @media screen and (max-width: 992px) {
+     width: 720px;
+   }
+  @media screen and (max-width: 768px) {
+    width: 540px;
+  }
+   @media screen and (max-width: 576px) {
+     width: 100%;
+     padding: 0;
+   }
+}
+
+.section {
+  &__button {
+    width: 225px;
+    height: 60px;
+    color: #fff;
+    background-color: $main-color; 
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    font-family: $font-second;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 1px  1px 2px 2px #0005;
+      transform: scale(1.02);
+    }
+  }
+
+}
+.section__bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section__bg-book_1 {
+  background-image: url('../img/section-bg-book-1.jpg');
+}
+.section__bg-book_2 {
+  background-image: url('../img/section-bg-book-2.jpg');
+}
+.section__bg-review {
+  background-image:linear-gradient($bg-card-color, $bg-card-color),
+  url('../img/section-bg-review.jpg');
+}

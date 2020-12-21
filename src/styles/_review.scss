@@ -1,0 +1,42 @@
+.section__review {
+  min-height: 730px;
+  padding: 117px 0 198px;
+  @media screen and (max-width: 576px) {
+    padding: 30px 15px;
+  }
+  &-title {
+    text-align: center;
+  }
+}
+.card-review {
+  width: 95%;
+  display: flex;
+  
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+    width: 100%;
+  }
+  &__image {
+    width: 445px;
+    background-image: url(../img/card-review-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 0 0 45%;
+    @media screen and (max-width: 992px) {
+      height: 284px;
+      flex: initial;
+      width: 100%;
+    }
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+  }
+  &__side {
+    background-color: $bg-color;
+    padding: 45px 60px;
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+  }
+}

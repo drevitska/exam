@@ -1,0 +1,217 @@
+.bhr {
+  background-image: url(../img/bhr-1.jpg);
+  background-repeat: no-repeat;
+  height: 740px;
+  padding-top: 30px;
+  @media screen and (max-width: 576px) {
+    height: auto;
+    padding: 50px 0;
+  }
+  &__container {
+    
+    text-align: center;
+    padding-top: 270px;
+  }
+  &__logo {
+    font-size: 48px;
+    text-transform: uppercase;
+    font-weight: 700;
+
+  }
+  &__title {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 4.1px;
+  }
+  &__form {
+    display: flex;
+    margin: 0 auto;
+    width: 650px;
+    margin-top: 55px;
+    margin-bottom: 120px;
+    border: 2px solid #fff;
+    background-color: #fff;
+    outline: none;
+    @media screen and (max-width: 768px) {
+      width: 540px;
+    }
+    @media screen and (max-width: 576px) {
+      width: calc(100% - 30px);
+    }
+  }
+
+  &__input {
+    height: 60px;
+    width: 500px;
+    text-align: center;
+    color: #999999;
+    outline: none;
+    border: none;
+    @media screen and (max-width: 768px) {
+      width: 390px;
+    }
+    @media screen and (max-width: 576px) {
+      width: calc(100% - 150px);
+    }
+  }
+  &__button {
+    width: 150px;
+    border: none;
+    background-color: $main-color;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 23px 15px 23px 40px;
+    position: relative;
+    text-align: left;
+  }
+  &__scr--text {
+    margin-bottom: 15px;
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+}
+
+.svg-icon_search {
+  fill: #fff;
+  margin-left: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.section_menu {
+  padding: 30px 0;
+  background-color:$main-color;
+  @media screen and (max-width: 576px) {
+    padding: 0;
+  }
+}
+.menu {
+  transition: all 0.6s ease;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.6s ease;
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    position: absolute;
+    top: 48px;
+    z-index: 10;
+    transform:translateX(100%);
+    background-color: $bg-card-color;
+    transition: all 0.6s;
+  }
+  
+  &__logo {
+    text-transform: uppercase;
+    font-style: 24px;
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    font-family: $font-second;
+    text-transform: uppercase;
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      padding: 0;
+    }
+  }
+  &__item {
+    margin-left: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    &:hover {
+      transform: scale(1.05);
+
+    }
+    @media screen and (max-width: 576px) {
+      width: 100%;
+      margin: 0;
+      border-bottom: 1px dashed #fff8;
+      text-align: center;
+      &:hover {
+        background-color: $bg-color;
+      }
+    }
+  }
+  &__link {
+    color: #fff;
+    @media screen and (max-width: 576px) {
+      display: block;
+      padding: 40px 15px;
+    }
+  }
+}
+#toggle {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  @media screen and (max-width: 576px) {
+    display: block;
+    z-index: -1;
+  }
+  
+}
+#toggle:checked {
+  &~.nav {
+    display: block;
+    transform:translateX(0);
+  }
+}
+@media screen and (max-width: 576px) {
+  .toggle-container {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    background-color: #3333;
+    border-radius: 5px;
+    // transition: all 0.6s ease;
+  }
+  .toggle-button {
+    display: block;
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.6s;
+    &_1 {
+      top: 11px;
+      transform-origin: 10px 8px;
+    }
+    &_2 {
+      top: 23px;
+    }
+    &_3 {
+      top: 35px;
+      transform-origin: 6px -5px;
+    }
+  }
+  #toggle:checked {
+    &~.toggle-container>.toggle-button {
+      &_1 {
+        
+        transform: rotateZ(45deg);
+        
+      }
+
+      &_2 {
+        opacity:0;
+      }
+
+      &_3 {
+        
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+}

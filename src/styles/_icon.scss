@@ -1,0 +1,58 @@
+.section_icon {
+  background-color: $bg-color;
+}
+.icon {
+  &__wrap {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    @media screen and (max-width: 1200px) {
+      padding: 30px 15px;
+    }
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 32.3%;
+      height: 94px;
+      background: url('../img/arka.png') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    &::before {
+      top: 15%;
+      left:17%;
+      @media screen and (max-width: 1200px) {
+        top: 25%;
+      }
+    }
+    &::after {
+      top: 15%;
+      left:50%;
+      @media screen and (max-width: 1200px) {
+        top: 25%;
+      }
+    }
+  }  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__cirkle {
+    width: 96px;
+    height: 96px;
+    background-color: $bg-color;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+  }
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

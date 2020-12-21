@@ -1,0 +1,22 @@
+.section_book {
+  height: 700px;
+  padding-top: 230px;
+}
+.section__book-wrap {
+  display: flex;
+  &_right {
+    justify-content: flex-end;
+  }
+}
+.card {
+  width: 540px;
+  height: 371px;
+  background-color: $bg-card-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 47px 30px;
+  &__title {
+    text-transform: uppercase;
+  }
+}
